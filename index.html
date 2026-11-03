@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <a href="#"class="logo">SkyCast</a>
+
+        <nav class="navbar">
+            <a href="#today">Today</a>
+            <a href="#forecast">Forecast</a>
+            <a href="#details">details</a>
+
+        </nav>
+    </header>
+    <main>
+        <!--Search-->
+        <section class="search-section">
+            <h1>Weather Dashboard</h1>
+            <p>Discover the weather around you.</p>
+            <form class="search-form">
+                <input type="text" id="city-input" placeholder="Search your city..." aria-label="City name" required>
+                <button type="submit">Search</button>
+
+            </form>
+            <p id="error-message" role="alert"></p>
+
+        </section>
+        <!--Current Weather-->
+        <section id="today" class="current-weather">
+            <div class="weather-info">
+                <p id="city-name">Lahore, Pakistan</p>
+                <p id="current-date">Today's Weather</p>
+                <h2>
+                    <span id="temperature"></span>C
+                </h2>
+                <p id="weather-condition">Current Conditions</p>
+                <p>Feels like <span id="feels-like"></span>C</p>
+
+            </div>
+            <div class="weather-icon" aria-hidden="true">
+
+            </div>
+        </section>
+        <!--Weather Highlights-->
+        <section id="details" class="weather-details">
+            <h2>Today's Highlights</h2>
+            <div class="details-grid">
+                <article class="detail-card">
+            <h3>Humidity</h3>
+     <p><span id="humidity">--</span>%</p>
+                  </article>
+
+         <article class="detail-card">
+    <h3>Wind Speed</h3>
+    <p><span id="wind-speed">--</span> km/h</p>
+     </article>
+
+       <article class="detail-card">
+               <h3>Pressure</h3>
+          <p><span id="pressure">--</span> hPa</p>
+             </article>
+
+            </div>
+
+
+        </section>
+
+        <!--Forecast-->
+        <section id="forecast" class="forecast-section">
+            <h2>Hourly Forecast</h2>
+            <div id="hourly-forecast" class="forecast-grid">
+                <article class="forecast-card">
+                          <p>Time</p>
+                           <span>⛅</span>
+                            <p>--°C</p>
+
+                        </article>
+
+            </div>
+            <h2>7-Day Forecast</h2>
+            <div id="weekly-forecast" class="weekly-forecast">
+                <p>Forecast data will appear here.</p>
+            </div>
+        </section>
+    </main>
+    <!--Footer-->
+    <footer class="footer">
+        <p>SkyCast @ 2026 | Your Weather Companion</p>
+        
+    </footer>
+    <script src="java.js"></script>
+
+    
+</body>
+</html>
